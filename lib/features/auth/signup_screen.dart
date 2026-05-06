@@ -12,21 +12,6 @@ class SignUpScreen extends StatelessWidget {
     return SafeArea(
       child: Stack(
         children: [
-          // Background Image
-          Positioned.fill(
-            child: Image.asset(
-              'assets/app_images/background.png',
-              fit: BoxFit.cover,
-              filterQuality: FilterQuality.high,
-            ),
-          ),
-
-          // Dark overlay
-          Positioned.fill(
-            child: Container(color: Colors.black.withOpacity(0.3)),
-          ),
-
-          // Signup Card
           AuthGlassCard(
             title: 'Create Account',
             subtitle: 'Sign up to get started',
@@ -82,14 +67,14 @@ class SignUpScreen extends StatelessWidget {
               Row(
                 children: [
                   Expanded(
-                    child: Divider(color: Colors.white.withOpacity(0.3)),
+                    child: Divider(color: Colors.white.withValues(alpha: 0.3)),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16),
                     child: Text('OR', style: AppTextStyles.divider),
                   ),
                   Expanded(
-                    child: Divider(color: Colors.white.withOpacity(0.3)),
+                    child: Divider(color: Colors.white.withValues(alpha: 0.3)),
                   ),
                 ],
               ),
@@ -133,9 +118,9 @@ class SignUpScreen extends StatelessWidget {
   Widget _buildSocialButton(IconData icon) {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.white.withOpacity(0.15),
+        color: Colors.white.withValues(alpha: 0.15),
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: Colors.white.withOpacity(0.3)),
+        border: Border.all(color: Colors.white.withValues(alpha: 0.3)),
       ),
       child: IconButton(
         onPressed: () {},

@@ -29,49 +29,30 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     final splashState = ref.watch(splashViewModelProvider);
-
     return Scaffold(
+      backgroundColor: Colors.transparent,
       body: SafeArea(
         top: false,
-        child: Stack(
-          children: [
-            Positioned.fill(
-              child: Image.asset(
-                'assets/app_images/background.png',
-                fit: BoxFit.cover,
-                filterQuality: FilterQuality.high,
-                alignment: const Alignment(0.0, 0.0),
-              ),
-            ),
-            Positioned.fill(
-              child: Container(color: Colors.black.withValues(alpha: 0.3)),
-            ),
-            Align(
-              alignment: Alignment.bottomCenter,
-              child: splashState.status.whenOrNull(
-                initial: () => const SizedBox.shrink(),
-                isLoading: () =>
-                    const CircularProgressIndicator(color: Colors.white),
-                success: () => const SizedBox.shrink(),
-                error: () => Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    const Icon(
-                      Icons.error_outline,
-                      color: Colors.red,
-                      size: 64,
-                    ),
-                    const SizedBox(height: 12),
-                    Text(
-                      splashState.errorMessage ?? 'Something went wrong',
-                      style: const TextStyle(color: Colors.white, fontSize: 14),
-                      textAlign: TextAlign.center,
-                    ),
-                  ],
+        child: Align(
+          alignment: Alignment.bottomCenter,
+          child: splashState.status.whenOrNull(
+            initial: () => const SizedBox.shrink(),
+            isLoading: () =>
+                const CircularProgressIndicator(color: Colors.white),
+            success: () => const SizedBox.shrink(),
+            error: () => Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const Icon(Icons.error_outline, color: Colors.red, size: 64),
+                const SizedBox(height: 12),
+                Text(
+                  splashState.errorMessage ?? 'Something went wrong',
+                  style: const TextStyle(color: Colors.white, fontSize: 14),
+                  textAlign: TextAlign.center,
                 ),
-              ),
+              ],
             ),
-          ],
+          ),
         ),
       ),
     );
