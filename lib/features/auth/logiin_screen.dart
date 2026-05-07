@@ -3,7 +3,6 @@ import 'package:go_router/go_router.dart';
 import 'package:vpn_app/core/styles/app_text_styles.dart';
 import 'package:vpn_app/core/widgets/glass_text_input_field.dart';
 import 'package:vpn_app/core/widgets/auth_glass_card.dart';
-import 'package:vpn_app/features/auth/signup_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -13,20 +12,6 @@ class LoginScreen extends StatelessWidget {
     return SafeArea(
       child: Stack(
         children: [
-          // Background Image
-          Positioned.fill(
-            child: Image.asset(
-              'assets/app_images/background.png',
-              fit: BoxFit.cover,
-              filterQuality: FilterQuality.high,
-            ),
-          ),
-
-          // Dark overlay
-          Positioned.fill(
-            child: Container(color: Colors.black.withValues(alpha: 0.3)),
-          ),
-
           // Login Card
           AuthGlassCard(
             title: 'Welcome Back',
@@ -75,14 +60,14 @@ class LoginScreen extends StatelessWidget {
               Row(
                 children: [
                   Expanded(
-                    child: Divider(color: Colors.white.withOpacity(0.3)),
+                    child: Divider(color: Colors.white.withValues(alpha: 0.3)),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16),
                     child: Text('OR', style: AppTextStyles.divider),
                   ),
                   Expanded(
-                    child: Divider(color: Colors.white.withOpacity(0.3)),
+                    child: Divider(color: Colors.white.withValues(alpha: 0.3)),
                   ),
                 ],
               ),
@@ -110,7 +95,7 @@ class LoginScreen extends StatelessWidget {
                   Text("Don't have an account? ", style: AppTextStyles.small),
                   GestureDetector(
                     onTap: () {
-                      context.go('/signup');
+                      context.push('/signup');
                     },
                     child: Text('Sign Up', style: AppTextStyles.boldLink),
                   ),
@@ -126,9 +111,9 @@ class LoginScreen extends StatelessWidget {
   Widget _buildSocialButton(IconData icon) {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.white.withOpacity(0.15),
+        color: Colors.white.withValues(alpha: 0.15),
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: Colors.white.withOpacity(0.3)),
+        border: Border.all(color: Colors.white.withValues(alpha: 0.3)),
       ),
       child: IconButton(
         onPressed: () {},

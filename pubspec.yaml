@@ -1,7 +1,6 @@
 name: vpn_app
 description: "A new Flutter project."
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
-
+publish_to: 'none'
 version: 1.0.0+1
 
 environment:
@@ -10,9 +9,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   go_router: ^17.2.3
   flutter_riverpod: ^3.2.1
@@ -21,14 +17,55 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^6.0.0
+  flutter_flavorizr: ^2.4.2
+  firebase_core: ^3.13.0
+  firebase_messaging: ^15.2.5
+  flutter_launcher_icons: ^0.14.4
 
 flutter:
-
   uses-material-design: true
-
-
   assets:
-       - assets/app_images/
-       - assets/app_icons/
+    - assets/app_images/
+    - assets/app_icons/
 
+flavorizr:
+  app:
+    android:
+      flavorDimensions: "env"
+  flavors:
+    dev:
+      app:
+        name: "VPN Dev"
+      android:
+        applicationId: "com.yourcompany.vpnapp.dev"
+      ios:
+        bundleId: "com.yourcompany.vpnapp.dev"
+    staging:
+      app:
+        name: "VPN Staging"
+      android:
+        applicationId: "com.yourcompany.vpnapp.staging"
+      ios:
+        bundleId: "com.yourcompany.vpnapp.staging"
+    prod:
+      app:
+        name: "VPN"
+      android:
+        applicationId: "com.yourcompany.vpnapp"
+      ios:
+        bundleId: "com.yourcompany.vpnapp"
 
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/app_icons/vpn.png"
+  adaptive_icon_background: "#872F8D"
+  adaptive_icon_foreground: "assets/app_icons/vpn.png"
+  min_sdk_android: 21
+  remove_alpha_ios: true
+  background_color_ios: "#872F8D"
+  web:
+    generate: true
+    image_path: "assets/app_icons/vpn.png"
+    background_color: "#872F8D"
+    theme_color: "#872F8D"
