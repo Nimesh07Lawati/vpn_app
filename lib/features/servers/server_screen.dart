@@ -35,17 +35,7 @@ class _ServerSelectionScreenState extends ConsumerState<ServerSelectionScreen> {
     return Scaffold(
       backgroundColor: Colors.transparent,
       body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [
-              AppTheme.primaryPurple,
-              AppTheme.deepPurple,
-              AppTheme.darkPurple,
-            ],
-          ),
-        ),
+        decoration: BoxDecoration(color: const Color.fromRGBO(38, 119, 119, 1)),
         child: SafeArea(
           child: Column(
             children: [

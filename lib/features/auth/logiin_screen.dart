@@ -95,7 +95,7 @@ class LoginScreen extends StatelessWidget {
                   Text("Don't have an account? ", style: AppTextStyles.small),
                   GestureDetector(
                     onTap: () {
-                      context.go('/signup');
+                      context.push('/signup');
                     },
                     child: Text('Sign Up', style: AppTextStyles.boldLink),
                   ),

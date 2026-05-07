@@ -11,6 +11,7 @@ class AppTextStyles {
   static const TextStyle headingMedium = TextStyle(
     fontSize: 24,
     fontWeight: FontWeight.bold,
+    color: Colors.white,
   );
 
   static const TextStyle headingSmall = TextStyle(

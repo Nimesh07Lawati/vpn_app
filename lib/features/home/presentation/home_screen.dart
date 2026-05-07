@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vpn_app/core/styles/app_text_styles.dart';
-import 'package:vpn_app/core/theme/app_theme.dart';
 import 'package:vpn_app/core/widgets/connection_status.dart';
 import 'package:vpn_app/core/widgets/data_stats_card.dart';
 import 'package:vpn_app/core/widgets/vpn_button_widget.dart';
@@ -24,17 +23,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
 
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [
-              AppTheme.primaryPurple,
-              AppTheme.deepPurple,
-              AppTheme.darkPurple,
-            ],
-          ),
-        ),
+        decoration: BoxDecoration(color: const Color.fromRGBO(38, 119, 119, 1)),
         child: SafeArea(
           child: CustomScrollView(
             slivers: [
@@ -46,13 +35,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                 backgroundColor: Colors.transparent,
                 elevation: 0,
                 flexibleSpace: FlexibleSpaceBar(
-                  title: Text(
-                    'VPN Secure',
-                    style: AppTextStyles.headingLarge.copyWith(
-                      color: Colors.white,
-                      fontSize: 24,
-                    ),
-                  ),
+                  title: Text('VPN Secure', style: AppTextStyles.headingMedium),
                   centerTitle: false,
                   titlePadding: const EdgeInsets.only(left: 20, bottom: 16),
                 ),

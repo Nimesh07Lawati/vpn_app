@@ -102,7 +102,7 @@ class SignUpScreen extends StatelessWidget {
                   Text("Already have an account? ", style: AppTextStyles.small),
                   GestureDetector(
                     onTap: () {
-                      context.go('/login'); // go back to login
+                      context.pop(); // go back to login
                     },
                     child: Text('Login', style: AppTextStyles.boldLink),
                   ),
