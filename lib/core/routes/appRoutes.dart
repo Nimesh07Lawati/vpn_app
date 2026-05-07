@@ -6,6 +6,8 @@ import 'package:vpn_app/core/widgets/app_shell.dart';
 import 'package:vpn_app/features/auth/signup_screen.dart';
 import 'package:vpn_app/features/home/presentation/home_screen.dart';
 import 'package:vpn_app/features/auth/logiin_screen.dart';
+import 'package:vpn_app/features/profile/profile_screen.dart';
+import 'package:vpn_app/features/servers/server_screen.dart';
 import 'package:vpn_app/features/splash/presentation/splash_screen.dart';
 
 final routerProvider = Provider<GoRouter>((ref) {
@@ -41,6 +43,20 @@ final routerProvider = Provider<GoRouter>((ref) {
         name: 'home',
         pageBuilder: (context, state) =>
             _slidePage(key: state.pageKey, child: const HomeScreen()),
+      ),
+      GoRoute(
+        path: '/profile',
+        name: 'profile',
+        pageBuilder: (context, state) =>
+            _slidePage(key: state.pageKey, child: const ProfileScreen()),
+      ),
+      GoRoute(
+        path: '/server',
+        name: 'server',
+        pageBuilder: (context, state) => _slidePage(
+          key: state.pageKey,
+          child: const ServerSelectionScreen(),
+        ),
       ),
     ],
   );

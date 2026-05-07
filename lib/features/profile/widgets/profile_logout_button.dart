@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:vpn_app/core/styles/app_text_styles.dart';
 
 class ProfileLogoutButton extends StatelessWidget {
@@ -21,7 +22,7 @@ class ProfileLogoutButton extends StatelessWidget {
       child: TextButton(
         onPressed: () {
           // Add logout logic here
-          Navigator.pop(context);
+          context.go('/login');
         },
         style: TextButton.styleFrom(
           padding: const EdgeInsets.symmetric(vertical: 16),

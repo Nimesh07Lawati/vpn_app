@@ -1,11 +1,11 @@
 // lib/features/home/presentation/home_screen.dart
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:vpn_app/core/styles/app_text_styles.dart';
 import 'package:vpn_app/core/widgets/connection_status.dart';
 import 'package:vpn_app/core/widgets/data_stats_card.dart';
 import 'package:vpn_app/core/widgets/vpn_button_widget.dart';
-import 'package:vpn_app/features/profile/profile_screen.dart';
 import 'package:vpn_app/features/servers/server_screen.dart';
 import 'package:vpn_app/features/servers/vpn_provider.dart';
 
@@ -51,12 +51,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                     ),
                     child: IconButton(
                       onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const ProfileScreen(),
-                          ),
-                        );
+                        context.push('/profile');
                       },
                       icon: const Icon(
                         Icons.person_outline,
@@ -201,12 +196,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   Widget _buildServerSelectionCard() {
     return GestureDetector(
       onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => const ServerSelectionScreen(),
-          ),
-        );
+        context.push('/server');
       },
       child: Container(
         padding: const EdgeInsets.all(20),

@@ -1,6 +1,7 @@
 // lib/features/server/presentation/server_selection_screen.dart
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:vpn_app/core/styles/app_text_styles.dart';
 import 'package:vpn_app/core/theme/app_theme.dart';
 import 'package:vpn_app/features/servers/server_card.dart';
@@ -61,7 +62,7 @@ class _ServerSelectionScreenState extends ConsumerState<ServerSelectionScreen> {
                               ref
                                   .read(serverProvider.notifier)
                                   .selectServer(filteredServers[index]);
-                              Navigator.pop(context);
+                              context.pop();
                             },
                           );
                         },
