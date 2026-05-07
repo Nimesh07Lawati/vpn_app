@@ -17,9 +17,10 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^6.0.0
-  flutter_flavorizr: ^2.4.2 
+  flutter_flavorizr: ^2.4.2
   firebase_core: ^3.13.0
   firebase_messaging: ^15.2.5
+  flutter_launcher_icons: ^0.14.4
 
 flutter:
   uses-material-design: true
@@ -27,7 +28,6 @@ flutter:
     - assets/app_images/
     - assets/app_icons/
 
-# 👇 flavorizr config is a TOP-LEVEL block, completely separate
 flavorizr:
   app:
     android:
@@ -54,3 +54,18 @@ flavorizr:
         applicationId: "com.yourcompany.vpnapp"
       ios:
         bundleId: "com.yourcompany.vpnapp"
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/app_icons/vpn.png"
+  adaptive_icon_background: "#872F8D"
+  adaptive_icon_foreground: "assets/app_icons/vpn.png"
+  min_sdk_android: 21
+  remove_alpha_ios: true
+  background_color_ios: "#872F8D"
+  web:
+    generate: true
+    image_path: "assets/app_icons/vpn.png"
+    background_color: "#872F8D"
+    theme_color: "#872F8D"

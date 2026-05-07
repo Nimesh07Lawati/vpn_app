@@ -140,9 +140,7 @@ class AuthNotifier extends StateNotifier<AuthState> {
         isLoading: false,
         errorMessage: null,
       );
-    } else {
-      state = state.copyWith(isLoading: false, isAuthenticated: false);
-    }
+    } else {}
   }
 
   // Login with email and password
