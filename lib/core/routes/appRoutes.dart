@@ -36,8 +36,7 @@ final routerProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: '/home',
         name: 'home',
-        builder: (context, state) =>
-            const HomeScreen(), // 👈 default transition
+        builder: (context, state) => const HomeScreen(),
       ),
     ],
   );

@@ -1,50 +1,56 @@
+// lib/core/styles/app_text_styles.dart
 import 'package:flutter/material.dart';
 
 class AppTextStyles {
-  // Title
-  static const TextStyle heading = TextStyle(
+  static const TextStyle headingLarge = TextStyle(
     fontSize: 32,
     fontWeight: FontWeight.bold,
-    color: Colors.white,
-    letterSpacing: 0.5,
+    letterSpacing: -0.5,
   );
 
-  // Subtitle
-  static TextStyle subtitle = TextStyle(
-    fontSize: 16,
-    color: Colors.white.withOpacity(0.8),
-  );
-
-  // Input text
-  static const TextStyle inputText = TextStyle(color: Colors.white);
-
-  // Hint text
-  static TextStyle hintText = TextStyle(color: Colors.white.withOpacity(0.6));
-
-  // Button text
-  static const TextStyle buttonText = TextStyle(
-    fontSize: 18,
+  static const TextStyle headingMedium = TextStyle(
+    fontSize: 24,
     fontWeight: FontWeight.bold,
   );
 
-  // Link text
-  static TextStyle link = TextStyle(
-    color: Colors.white.withOpacity(0.9),
+  static const TextStyle headingSmall = TextStyle(
+    fontSize: 20,
+    fontWeight: FontWeight.w600,
+  );
+
+  static const TextStyle bodyLarge = TextStyle(
+    fontSize: 16,
     fontWeight: FontWeight.w500,
   );
 
-  // Small faded text
-  static TextStyle small = TextStyle(color: Colors.white.withOpacity(0.8));
+  static const TextStyle bodyMedium = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.normal,
+  );
 
-  // Divider text (OR)
-  static TextStyle divider = TextStyle(
-    color: Colors.white.withOpacity(0.7),
+  static const TextStyle small = TextStyle(
+    fontSize: 12,
+    fontWeight: FontWeight.normal,
+  );
+
+  static const TextStyle buttonText = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w600,
+  );
+
+  static const TextStyle link = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.w500,
+    decoration: TextDecoration.underline,
+  );
+
+  static const TextStyle divider = TextStyle(
+    fontSize: 12,
     fontWeight: FontWeight.w500,
   );
 
-  // Bold link (Sign up)
   static const TextStyle boldLink = TextStyle(
-    color: Colors.white,
+    fontSize: 14,
     fontWeight: FontWeight.bold,
     decoration: TextDecoration.underline,
   );
