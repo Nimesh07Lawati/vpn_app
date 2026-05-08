@@ -6,7 +6,6 @@ import 'package:vpn_app/core/styles/app_text_styles.dart';
 import 'package:vpn_app/core/widgets/connection_status.dart';
 import 'package:vpn_app/core/widgets/data_stats_card.dart';
 import 'package:vpn_app/core/widgets/vpn_button_widget.dart';
-import 'package:vpn_app/features/servers/server_screen.dart';
 import 'package:vpn_app/features/servers/vpn_provider.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {

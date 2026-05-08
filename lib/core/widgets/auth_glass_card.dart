@@ -30,7 +30,7 @@ class AuthGlassCard extends StatelessWidget {
             ),
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withOpacity(0.1),
+                color: Colors.black.withValues(alpha: 0.1),
                 blurRadius: 20,
                 spreadRadius: 5,
                 offset: const Offset(0, 10),
@@ -64,7 +64,9 @@ class AuthGlassCard extends StatelessWidget {
                     Text(
                       subtitle,
                       textAlign: TextAlign.center,
-                      style: TextStyle(color: Colors.white.withOpacity(0.8)),
+                      style: TextStyle(
+                        color: Colors.white.withValues(alpha: 0.8),
+                      ),
                     ),
 
                     const SizedBox(height: 40),

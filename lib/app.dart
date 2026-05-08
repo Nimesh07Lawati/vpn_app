@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:vpn_app/core/routes/appRoutes.dart';
+import 'package:vpn_app/core/routes/app_routes.dart';
 import 'flavors.dart';
 
 class App extends ConsumerWidget {
